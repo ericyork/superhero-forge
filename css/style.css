@@ -1,10 +1,14 @@
 :root {
   font-size: 15px;
+  font-weight: 500;
   --primary: #505050;
   --accent: #6b00b5;
   --reverse: #ececec;
   --brightest: #f4f4f4;
-  --shadow: rgba(80,80,80,0.25);
+  --shadow: rgba(80,80,80,0.75);
+}
+strong {
+  font-weight: 900;
 }
 body {
   width: 90%;
@@ -24,30 +28,62 @@ body > p {
   color: var(--reverse);
 }
 button {
-  margin: 1em auto;
-  padding: 1em 2em;
+  margin: .5em auto;
+  padding: .75em 2em;
   font-size: .9em;
   font-weight: 600;
   color: var(--reverse);
   text-transform: uppercase;
   background-color: var(--accent);
+  box-shadow: 2px 2px 14px var(--shadow);
   border: none;
   border-radius: 4px;
 }
-.hero {
+.hero, .singleton section {
   display: grid;
   grid-gap: 1.5em;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.profile {
+.profile, .model {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background: var(--brightest);
-  border: 2px solid var(--primary);
   padding: 3em;
-  box-shadow: 2px 2px 14px var(--shadow);
 }
-.hero h2, .hero p {
+section h2, section p {
+  text-align: center;
+}
+.singleton, .decorator {
+  background: var(--brightest);
+  padding: 3em;
+}
+.singleton section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.decorator {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+}
+.stats {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 3em;
+}
+.stats h2 {
+  margin-bottom: 0;
+}
+.stats h2, .stats p {
+  text-align: left;
+}
+table {
+  border: 1px solid var(--accent);
+}
+.stats td {
+  min-width: 3em;
+}
+.stats td:first-child {
   text-align: center;
 }

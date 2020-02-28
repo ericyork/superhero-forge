@@ -81,3 +81,22 @@ function wonderWomanAction() {
 function wonderWomanTrip() {
   document.getElementById("wonder-woman-trip").innerHTML = (wonderWomansPowers.trip());
 }
+
+// Singleton Pattern
+// creates a counter to display input from three different sources
+class Victories {
+  constructor() {
+    let count = 0;
+    this.add = function() {
+      return ++count;
+    }
+  }
+}
+// usage
+let pageCounter = new Victories();
+function addVictory() {
+  document.getElementById("display").innerHTML = (pageCounter.add());
+}
+
+// Decorator Pattern
+// creates two decorator functions to modify existing objects

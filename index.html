@@ -34,24 +34,71 @@
     <section class="hero">
       <div class="profile">
         <h2>Ironman</h2>
-        <p id="ironman-action">???</p>
         <button onclick="ironManAction()">Attack</button>
-        <p id="ironman-stun">???</p>
+        <p id="ironman-action">???</p>
         <button onclick="ironManStun()">Effect</button>
+        <p id="ironman-stun">???</p>
       </div>
       <div class="profile">
         <h2>Spiderman</h2>
-        <p id="spiderman-action">???</p>
         <button onclick="spiderManAction()">Attack</button>
-        <p id="spiderman-stun">???</p>
+        <p id="spiderman-action">???</p>
         <button onclick="spiderManStun()">Effect</button>
+        <p id="spiderman-stun">???</p>
       </div>
       <div class="profile">
         <h2>Wonder Woman</h2>
-        <p id="wonder-woman-action">???</p>
         <button onclick="wonderWomanAction()">Attack</button>
-        <p id="wonder-woman-trip">???</p>
+        <p id="wonder-woman-action">???</p>
         <button onclick="wonderWomanTrip()">Effect</button>
+        <p id="wonder-woman-trip">???</p>
+      </div>
+    </section>
+    <h1>Singelton Pattern</h1>
+    <p>Creates a single instance of a Victories object. Each time a victory is logged, it's routed to the instance and the value is incremented for display.</p>
+    <section class="singleton">
+      <h2>Hero Victories: <span id="display">0</span></h2>
+      <section>
+        <div class="hero-victory">
+          <h2>Ironman</h2>
+          <button onclick="addVictory()">Ironman Wins</button>
+        </div>
+        <div class="hero-victory">
+          <h2>Spiderman</h2>
+          <button onclick="addVictory()">Spiderman Wins</button>
+        </div>
+        <div class="hero-victory">
+          <h2>Wonder Woman</h2>
+          <button onclick="addVictory()">Wonder Woman Wins</button>
+        </div>
+      </section>
+    </section>
+    <h1>Decorator Pattern</h1>
+    <p>An alternative to subclassing, this modifies the properties of objects without recreating them. Both of the decorator functions below accepts a hero object and returns a "decorated object". When the base Hero class activates Power Armor, it adds an attribute (flySpeed) and a function (flyMove); when activating Suit AI, it adds a new attribute (foresight) and modifies an existing attribute (baseSpeed).</p>
+    <section class="decorator">
+      <div class="model">
+        <img src="img/ironman.svg" alt=""/>
+        <p><strong>Ironman Power Ups</strong></p>
+        <button onclick="donPowerArmor()">Power Armor</button>
+        <button onclick="enableJarvis()">J.A.R.V.I.S.</button>
+      </div>
+      <div class="stats">
+        <table>
+          <th>STATS</th>
+          <tr><td><strong id="offense">8</strong></td>
+            <td><span>Offense</span></td>
+          </tr>
+          <tr><td><strong id="defense">12</strong></td>
+            <td><span>Defense</span></td>
+          </tr>
+          <tr><td><strong id="speed">5</strong></td>
+            <td><span>Speed</span></td>
+          </tr>
+        </table>
+        <div>
+          <p id="flyMove">Ironman can <strong>fly</strong>.</p>
+          <p id="foresight">Ironman has <strong>foresight</strong>.</p>
+        </div>
       </div>
     </section>
   </body>
