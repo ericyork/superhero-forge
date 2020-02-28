@@ -28,56 +28,56 @@ function revealWonderWoman() {
 }
 
 // Factory Pattern
-class BallFactory {
+class PowerFactory {
   constructor() {
-    this.createBall = function(type) {
-      let ball;
-      if (type === 'football' || type === 'soccer') ball = new Football();
-      else if (type === 'basketball') ball = new Basketball();
-      ball.roll = function() {
-        return `The ${this._type} is rolling.`;
+    this.makePower = function(type) {
+      let power;
+      if (type === 'punch' || type === 'fist') power = new HandStrike();
+      else if (type === 'kick') power = new FootStrike();
+      power.action = function() {
+        return `The hero delivers a ${this._type}.`;
       };
 
-      return ball;
+      return power;
     };
   }
 }
-class Football {
+class HandStrike {
   constructor() {
-    this._type = 'football';
-    this.kick = function() {
-      return 'You kicked the football.';
+    this._type = 'punch';
+    this.stun = function() {
+      return 'Opponent is stunned.';
     };
   }
 }
-class Basketball {
+class FootStrike {
   constructor() {
-    this._type = 'basketball';
-    this.bounce = function() {
-      return 'You bounced the basketball.';
+    this._type = 'kick';
+    this.trip = function() {
+      return 'Opponent is knocked down.';
     };
   }
 }
 // Factory output functions
-const factory = new BallFactory();
-const mySoccer = factory.createBall('soccer');
-const myFootball = factory.createBall('football');
-const myBasketball = factory.createBall('basketball');
-function rollSoccer() {
-  document.getElementById("roll-soccer").innerHTML = (mySoccer.roll());
+const factory = new PowerFactory();
+const ironMansPowers = factory.makePower('fist');
+const spiderMansPowers = factory.makePower('punch');
+const wonderWomansPowers = factory.makePower('kick');
+function ironManAction() {
+  document.getElementById("ironman-action").innerHTML = (ironMansPowers.action());
 }
-function kickSoccer() {
-  document.getElementById("kick-soccer").innerHTML = (mySoccer.kick());
+function ironManStun() {
+  document.getElementById("ironman-stun").innerHTML = (ironMansPowers.stun());
 }
-function rollFootball() {
-  document.getElementById("roll-football").innerHTML = (myFootball.roll());
+function spiderManAction() {
+  document.getElementById("spiderman-action").innerHTML = (spiderMansPowers.action());
 }
-function kickFootball() {
-  document.getElementById("kick-football").innerHTML = (myFootball.kick());
+function spiderManStun() {
+  document.getElementById("spiderman-stun").innerHTML = (spiderMansPowers.stun());
 }
-function rollBasketball() {
-  document.getElementById("roll-basketball").innerHTML = (myBasketball.roll());
+function wonderWomanAction() {
+  document.getElementById("wonder-woman-action").innerHTML = (wonderWomansPowers.action());
 }
-function bounceBasketball() {
-  document.getElementById("bounce-basketball").innerHTML = (myBasketball.bounce());
+function wonderWomanTrip() {
+  document.getElementById("wonder-woman-trip").innerHTML = (wonderWomansPowers.trip());
 }
