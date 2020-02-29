@@ -78,26 +78,32 @@
     <section class="decorator">
       <div class="model">
         <img src="img/ironman.svg" alt=""/>
-        <p><strong>Ironman Power Ups</strong></p>
+        <button onclick="displayStats()">Initialize Stats</button>
         <button onclick="donPowerArmor()">Power Armor</button>
         <button onclick="enableJarvis()">J.A.R.V.I.S.</button>
       </div>
       <div class="stats">
-        <table>
-          <th>STATS</th>
-          <tr><td><strong id="offense">8</strong></td>
-            <td><span>Offense</span></td>
-          </tr>
-          <tr><td><strong id="defense">12</strong></td>
-            <td><span>Defense</span></td>
-          </tr>
-          <tr><td><strong id="speed">5</strong></td>
-            <td><span>Speed</span></td>
-          </tr>
-        </table>
+        <div class="table">
+          <h3>STATS</h3>
+          <table>
+            <tr><td><strong id="offense">0</strong></td>
+              <td><span>Offense</span></td>
+            </tr>
+            <tr><td><strong id="defense">0</strong></td>
+              <td><span>Defense</span></td>
+            </tr>
+            <tr><td><strong id="base-speed">0</strong></td>
+              <td><span>Speed</span></td>
+            </tr>
+            <tr><td><strong id="fly-speed-value"> </strong></td>
+              <td><span id="fly-speed"> </span></td>
+            </tr>
+          </table>
+        </div>
         <div>
-          <p id="flyMove">Ironman can <strong>fly</strong>.</p>
-          <p id="foresight">Ironman has <strong>foresight</strong>.</p>
+          <h3>POWERS</h3>
+          <p id="foresight"> </p>
+          <p id="fly-move"> </p>
         </div>
       </div>
     </section>
