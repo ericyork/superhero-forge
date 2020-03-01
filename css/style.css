@@ -1,5 +1,5 @@
 :root {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   --primary: #505050;
   --accent: #6b00b5;
@@ -7,11 +7,18 @@
   --brightest: #f4f4f4;
   --shadow: rgba(80,80,80,0.75);
 }
+a:link, a:visited {
+  color: var(--reverse);
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: var(--brightest);
+}
 strong {
   font-weight: 900;
 }
 body {
-  width: 90%;
+  width: 94%;
   margin: 1em auto;
   background: var(--primary);
   color: var(--primary);
@@ -29,8 +36,14 @@ h6 {font-size: 1rem;}
 
 h1 {
   color: var(--reverse);
-  margin-top: .75em;
+  margin-top: 5em;
+  padding-top: .75em;
   margin-bottom: 0;
+  border-top: 1px solid var(--reverse);
+}
+h1:first-of-type {
+  margin-top: 2em;
+  border-top: none;
 }
 body > p {
   margin-top: 0;
@@ -51,6 +64,23 @@ button {
 }
 button:hover {
   box-shadow: 2px 2px 28px var(--shadow);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--reverse);
+  border-bottom: 1px solid var(--reverse);
+  padding: .5em .5em;
+}
+.brand {
+  flex-grow: 1;
+  font-size: 1.8em;
+}
+.nav-links {
+  flex-grow: 2;
+  display: flex;
+  justify-content: space-between;
 }
 .hero, .singleton section {
   display: grid;
@@ -82,7 +112,7 @@ section h2, section p {
 }
 .stats {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 2fr 3fr;
   grid-gap: 3em;
 }
 .stats div {
@@ -107,4 +137,12 @@ section h2, section p {
 }
 .stats td:first-child {
   text-align: center;
+}
+footer {
+  margin-top: 1em;
+  text-align: center;
+  padding: .5em;
+  color: var(--reverse);
+  border-top: 1px solid var(--reverse);
+  border-bottom: 1px solid var(--reverse);
 }
