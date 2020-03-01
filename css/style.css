@@ -155,6 +155,12 @@ section h2, section p {
 .stats td:first-child {
   text-align: center;
 }
+.thumb {
+  width: auto;
+  height: 2em;
+  vertical-align: middle;
+  margin-right: .5em;
+}
 footer {
   font-size: .85em;
   margin-top: 1em;
