@@ -2,7 +2,7 @@
   scroll-behavior: smooth;
   font-size: 18px;
   font-weight: 300;
-  --primary: #505050;
+  --primary: #190a33;
   --accent: #6b00b5;
   --nav-accent: #8d6393;
   --reverse: #c1c1c1;
@@ -25,11 +25,11 @@ a.top {
   font-size: .5em;
   font-weight: 400;
   background: var(--nav-accent);
-  padding: .35em .8em;
+  padding: .2em .7em;
   border-radius: 5px;
   border: .5px solid var(--brightest);
   position: relative;
-  bottom: .25em;
+  bottom: .2em;
 }
 body {
   width: 94%;
