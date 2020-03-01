@@ -1,5 +1,5 @@
 :root {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   --primary: #505050;
   --accent: #6b00b5;
@@ -17,7 +17,16 @@ body {
   color: var(--primary);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.5;
+  font-size: 1rem;
 }
+
+h1 {font-size: 1.5rem;}
+h2 {font-size: 1.4rem;}
+h3 {font-size: 1.3rem;}
+h4 {font-size: 1.2rem;}
+h5 {font-size: 1.1rem;}
+h6 {font-size: 1rem;}
+
 h1 {
   color: var(--reverse);
   margin-top: .75em;
