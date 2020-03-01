@@ -1,6 +1,3 @@
-// Creates a variable to save me from writing document.getElementById() over and over.
-const $ = document.getElementById();
-
 // Simple Constructor Pattern
 // Sets up a basic interface for creating objects
 class Hero {
@@ -21,13 +18,13 @@ const SpiderMan = new Hero('Spiderman', 'Peter Parker');
 const WonderWoman = new Hero('Wonder Woman', 'Diana Prince');
 
 function revealIronMan() {
-  $("ironman").innerHTML = (IronMan.revealIdentity());
+  document.getElementById("ironman").innerHTML = (IronMan.revealIdentity());
 }
 function revealSpiderMan() {
-  $("spiderman").innerHTML = (SpiderMan.revealIdentity());
+  document.getElementById("spiderman").innerHTML = (SpiderMan.revealIdentity());
 }
 function revealWonderWoman() {
-  $("wonder-woman").innerHTML = (WonderWoman.revealIdentity());
+  document.getElementById("wonder-woman").innerHTML = (WonderWoman.revealIdentity());
 }
 
 // Factory Pattern
@@ -67,22 +64,22 @@ const ironMansPowers = factory.makePower('fist');
 const spiderMansPowers = factory.makePower('punch');
 const wonderWomansPowers = factory.makePower('kick');
 function ironManAction() {
-  $("ironman-action").innerHTML = (ironMansPowers.action());
+  document.getElementById("ironman-action").innerHTML = (ironMansPowers.action());
 }
 function ironManStun() {
-  $("ironman-stun").innerHTML = (ironMansPowers.stun());
+  document.getElementById("ironman-stun").innerHTML = (ironMansPowers.stun());
 }
 function spiderManAction() {
-  $("spiderman-action").innerHTML = (spiderMansPowers.action());
+  document.getElementById("spiderman-action").innerHTML = (spiderMansPowers.action());
 }
 function spiderManStun() {
-  $("spiderman-stun").innerHTML = (spiderMansPowers.stun());
+  document.getElementById("spiderman-stun").innerHTML = (spiderMansPowers.stun());
 }
 function wonderWomanAction() {
-  $("wonder-woman-action").innerHTML = (wonderWomansPowers.action());
+  document.getElementById("wonder-woman-action").innerHTML = (wonderWomansPowers.action());
 }
 function wonderWomanTrip() {
-  $("wonder-woman-trip").innerHTML = (wonderWomansPowers.trip());
+  document.getElementById("wonder-woman-trip").innerHTML = (wonderWomansPowers.trip());
 }
 
 // Singleton Pattern
@@ -98,7 +95,7 @@ class Victories {
 // usage
 let pageCounter = new Victories();
 function addVictory() {
-  $("display").innerHTML = (pageCounter.add());
+  document.getElementById("display").innerHTML = (pageCounter.add());
 }
 //
 // Decorator Pattern
@@ -140,23 +137,23 @@ function aiEnhance(stats) {
 // usage
 let ironManStats = new Stats(8, 12, 5);
 function displayStats() {
-  $("offense").innerHTML = (ironManStats.offense);
-  $("defense").innerHTML = (ironManStats.defense);
-  $("base-speed").innerHTML = (ironManStats.speed);
+  document.getElementById("offense").innerHTML = (ironManStats.offense);
+  document.getElementById("defense").innerHTML = (ironManStats.defense);
+  document.getElementById("base-speed").innerHTML = (ironManStats.speed);
 }
 function donPowerArmor() {
   let buffedStats = armorOn(ironManStats);
-  $("defense").innerHTML = (buffedStats.defense);
-  $("base-speed").innerHTML = (buffedStats.speed);
-  $("fly-move").innerHTML = (buffedStats.active);
-  $("fly-speed").innerHTML = "Fly Speed";
-  $("fly-speed-value").innerHTML = (buffedStats.flySpeed);
+  document.getElementById("defense").innerHTML = (buffedStats.defense);
+  document.getElementById("base-speed").innerHTML = (buffedStats.speed);
+  document.getElementById("fly-move").innerHTML = (buffedStats.active);
+  document.getElementById("fly-speed").innerHTML = "Fly Speed";
+  document.getElementById("fly-speed-value").innerHTML = (buffedStats.flySpeed);
 }
 function enableJarvis() {
   let enhancedStats = aiEnhance(ironManStats);
-  $("offense").innerHTML = (enhancedStats.offense);
-  $("defense").innerHTML = (enhancedStats.defense);
-  $("base-speed").innerHTML = (enhancedStats.speed);
-  $("fly-speed-value").innerHTML = (enhancedStats.flySpeed);
-  $("foresight").innerHTML = (enhancedStats.enhanced);
+  document.getElementById("offense").innerHTML = (enhancedStats.offense);
+  document.getElementById("defense").innerHTML = (enhancedStats.defense);
+  document.getElementById("base-speed").innerHTML = (enhancedStats.speed);
+  document.getElementById("fly-speed-value").innerHTML = (enhancedStats.flySpeed);
+  document.getElementById("foresight").innerHTML = (enhancedStats.enhanced);
 }
