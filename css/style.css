@@ -107,14 +107,16 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   background: var(--brightest);
-  padding: 3em;
+  border-radius: 4px;
+  padding: 2em;
 }
 section h2, section p {
   text-align: center;
 }
 .singleton, .decorator {
   background: var(--brightest);
-  padding: 3em;
+  border-radius: 4px;
+  padding: 2em;
 }
 .singleton section div {
   display: flex;
