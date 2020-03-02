@@ -65,7 +65,7 @@ body > p {
   color: var(--brightest);
 }
 button {
-  margin: .5em auto;
+  margin: 1em auto;
   padding: .75em 2em;
   font-size: .9em;
   font-weight: 600;
@@ -108,7 +108,7 @@ nav {
   justify-content: space-around;
   background: var(--brightest);
   border-radius: 4px;
-  padding: 2em;
+  padding: 1em;
 }
 section h2, section p {
   text-align: center;
@@ -116,7 +116,7 @@ section h2, section p {
 .singleton, .decorator {
   background: var(--brightest);
   border-radius: 4px;
-  padding: 2em;
+  padding: 1.5em;
 }
 .singleton section div {
   display: flex;
