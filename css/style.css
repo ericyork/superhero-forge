@@ -113,6 +113,15 @@ nav {
 section h2, section p {
   text-align: center;
 }
+.singleton > h2 {
+  width: 90%;
+  margin: 1em auto;
+  padding: .25em;
+  border-bottom: 1px dotted var(--primary);
+}
+#display {
+  color: green;
+}
 .singleton, .decorator {
   background: var(--brightest);
   border-radius: 4px;
