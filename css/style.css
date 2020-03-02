@@ -97,10 +97,18 @@ nav {
   display: flex;
   justify-content: space-around;
 }
+@media screen and (max-width: 768px) {
+  nav {flex-direction: column;}
+  .brand {margin-bottom: .25em;}
+  .nav-links {width: 100%; flex-direction: row; justify-content: space-between;}
+}
 .hero, .singleton section {
   display: grid;
   grid-gap: 1.5em;
   grid-template-columns: 1fr 1fr 1fr;
+}
+@media screen and (max-width: 768px) {
+  .hero, .singleton section { grid-template-columns: 1fr;}
 }
 .profile, .model {
   display: flex;
@@ -110,14 +118,18 @@ nav {
   border-radius: 4px;
   padding: 1em;
 }
+.profile h2 {
+  padding-bottom: .25em;
+  border-bottom: 1px solid var(--primary);
+}
 section h2, section p {
   text-align: center;
 }
 .singleton > h2 {
-  width: 90%;
+  width: 94%;
   margin: 1em auto;
   padding: .25em;
-  border-bottom: 1px dotted var(--primary);
+  border-bottom: 1px solid var(--primary);
 }
 #display {
   color: green;
@@ -136,10 +148,16 @@ section h2, section p {
   display: grid;
   grid-template-columns: 5fr 7fr;
 }
+@media screen and (max-width: 768px) {
+  .decorator {grid-template-columns: 1fr;}
+}
 .stats {
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-gap: 3em;
+}
+@media screen and (max-width: 768px) {
+  .stats{grid-template-columns: 1fr;}
 }
 .stats div {
   padding: 1em;
