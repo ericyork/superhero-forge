@@ -9,6 +9,9 @@
   --brightest: #f4f4f4;
   --shadow: rgba(80,80,80,0.75);
 }
+@media screen and (max-width: 768px) {
+  :root {font-size: 15px;}
+}
 a:link, a:visited {
   font-weight: 500;
   color: var(--brightest);
@@ -100,7 +103,7 @@ nav {
 @media screen and (max-width: 768px) {
   nav {flex-direction: column;}
   .brand {margin-bottom: .25em;}
-  .nav-links {width: 100%; flex-direction: row; justify-content: space-between;}
+  .nav-links {font-size: .9em; width: 100%; flex-direction: row; justify-content: space-between;}
 }
 .hero, .singleton section {
   display: grid;
