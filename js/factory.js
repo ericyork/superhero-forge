@@ -8,7 +8,6 @@ class PowerFactory {
       power.action = function() {
         return `The hero delivers a ${this._type}.`;
       };
-
       return power;
     };
   }

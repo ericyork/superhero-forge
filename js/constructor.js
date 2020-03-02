@@ -2,10 +2,9 @@
 // Sets up a basic interface for creating objects
 class Hero {
   constructor(name, secretIdentity) {
-    // setting property values; underscore used as a convention for unique identifier.
+    // setting property values; underscore used as a convention for unique id
     this._name = name;
     this._secretIdentity = secretIdentity;
-
     // declaring a method on the object
     this.revealIdentity = function() {
       return `${this._name} is ${this._secretIdentity}`;
