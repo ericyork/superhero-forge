@@ -79,7 +79,7 @@ nav {
   align-items: center;
   border-top: 1px solid var(--reverse);
   border-bottom: 1px solid var(--reverse);
-  padding: .5em .5em;
+  padding: 1em .5em .5em .5em;
 }
 .brand {
   flex-grow: 1;
