@@ -25,9 +25,9 @@ function armorOn(stats) {
 
 // decorator 2
 function aiEnhance(stats) {
-  stats.isaiEnhanced = true;
+  stats.isAiEnhanced = true;
   stats.offense += 3;
-  stats.speed += 3;
+  stats.defense += 3;
   stats.speed += 3;
   stats.flySpeed += 3;
   stats.enhanced = `Ironman has enabled J.A.R.V.I.S.`;
