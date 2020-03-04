@@ -6,7 +6,6 @@ class Stats {
     this.defense = defense;
     this.speed = speed;
   }
-
   getStats() {
     return `Offense: ${this.offense}, Defense: ${this.defense}, Speed ${this.speed}`;
   }
